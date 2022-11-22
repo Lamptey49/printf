@@ -22,5 +22,5 @@ typedef struct call
 
 
 int _printf(const char *format, ...);
-
+int handle_printf(const char *format, int i, va_list list, char buffer[], int width, int precision, int size);
 #endif
