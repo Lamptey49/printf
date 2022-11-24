@@ -60,7 +60,7 @@ int print_octal(va_list types, char buffer[],
 
 
 
-	num = convert_size_unsignd (num, size);
+	num = convert_size_unsignd(num, size);
 
 	if (num == 0)
 		buffer[i--] = '0';
