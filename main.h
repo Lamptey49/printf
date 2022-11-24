@@ -19,10 +19,9 @@
 #define S_SHORT 1
 
 /**
-* struct fmt = Struct op
-*
-@fmt: the format.
-@fn: the function associated.
+* struct fmt -> struct op
+*@fmt: the format.
+*@fn: the function associated.
 */
 struct fmt
 {
@@ -38,6 +37,7 @@ struct fmt
 **/
 typedef struct fmt fmt_t;
 
+<<<<<<< HEAD
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i, va_list list,
 char buffer[], int flags, int width, int precision, int size);
@@ -46,6 +46,17 @@ int print_char(va_list types, char buffer[],
 int flags, int width, int prec, int size);
 int print_string(va_list types, char buffer[],
 int flags, int width, int prec, int  size);
+=======
+int _printf(const *char format, ...);
+int handle_print(const char *fmt, int *i, va_list list, char buffer[],
+int flags, int width, int precision, int size);
+
+/*****************FUNCTIONS**************************/
+int print_char(va_list types, char buffer[], int flags,
+int width, int prec, int size);
+int print_string(va_list types, char buffer[], int flags,
+int width, int prec, int  size);
+>>>>>>> a470ca30a135cec648067ee6b0684dc22d9ddc65
 int print_percent(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
