@@ -26,24 +26,26 @@
 */
 struct fmt
 {
-    char fmt;
-    int (*fn) (va_list, char[], int, int, int, int);
+	char fmt;
+	int (*fn)(va_list, char[], int, int, int, int);
 };
 
 /**
 * typedef struct fmt fmt_t - Struct op
 *
-* @fmt: the format
-* @fmt_t: the function asscociated
+* @fmt: the format if the function
+* @fmt_t: the function which is asscociated
 **/
 typedef struct fmt fmt_t;
 
-int _printf(const char* format, ...);
-int handle_print(const char *fmt, int *i, va_list list, char buffer[], int flags, int width, int precision, int size );
-
-/*****************FUNCTIONS**************************/
-int print_char(va_list types, char buffer[], int flags, int width, int prec, int size);
-int print_string(va_list types, char buffer[], int flags, int width, int prec, int  size );
+int _printf(const char *format, ...);
+int handle_print(const char *fmt, int *i, va_list list,
+char buffer[], int flags, int width, int precision, int size);
+/************FUCTIONS**************************/
+int print_char(va_list types, char buffer[],
+int flags, int width, int prec, int size);
+int print_string(va_list types, char buffer[],
+int flags, int width, int prec, int  size);
 int print_percent(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
@@ -106,6 +108,6 @@ int append_hexa_code(char, char[], int);
 int is_digit(char);
 
 long int convert_size_number(long int num, int size);
-long int convert_size_unsigned(unsigned long int num, int size);
+long int convert_size_unsignd(unsigned long int num, int size);
 #endif /* MAIN_H */
 
